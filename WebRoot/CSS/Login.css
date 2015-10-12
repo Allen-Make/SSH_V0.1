@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+
+#n_full{
+	background-color:#ffffff;
+	width:100%;
+	height:80%;
+/*	float:left;*/	
+}
+
+.n_top{/*顶部块*/
+	background-color:#0080ff;
+	width:100%;
+	height:10%;
+}
+.n_top li{
+	width:65%;
+	height:100%;
+	position:relative;
+	left:50px;
+	float:left;
+}
+
+.n_top li a{
+	color:white;
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-decoration:none;
+	
+	padding-top:10px;
+	display:block;
+	width:100px;
+	height:80%;
+	text-align:center;
+	background-color:#0080ff;
+	margin-left:2px;
+}
+.n_top li a:hover{
+	background-color:#ffffff;
+	color:#0000ff;
+}
+.n_buttom{/*底部块*/
+	background-color:#ffffff;
+	width:100%;
+	height:82%;	
+}
+.n_buttom_apart{/*底部块的一部分*/
+	margin:2% 0% 0% 0%;
+	background-color:#ffffff;
+	border:0px solid #ff0000;
+	width:70%;
+	height:98%;
+	position:relative;	
+}
+.n_buttom_in_left{/*底部块的一部分中的左边*/
+	margin:1% 1% 0% 2%;
+	border:0px solid #8080ff;
+	background-repeat: no-repeat;
+	width:60%;
+	height:90%;
+	float:left;
+	position:relative;		
+}
+.n_buttom_in_left p{
+	font-family:"微软雅黑";
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+.login_left_pictures_title {
+	line-height: 26px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #6f95c8;
+}
+.n_buttom_in_right{/*底部块的一部分中的右边*/
+	margin:1% 1% 0% 0%;
+	background-color:#ffffff;
+	border:0px solid #8080ff;
+	width:35%;
+	height:90%;
+	float:left;
+	position:relative;	
+}
+.n_buttom_in_right_top{/*底部块的一部分中的右边顶*/
+	background-color:#ffffff;
+	border:0px solid #0080ff;
+	width:100%;
+	height:20%;
+	position:relative;	
+}
+.n_buttom_in_right_mid{/*底部块的一部分中的右边中*/
+	background-color:#ffffff;
+	border:0px solid #8080ff;
+	width:100%;
+	height:60%;
+	position:relative;	
+}
+.n_buttom_in_right_buttom{/*底部块的一部分中的右边底*/
+	background-color:#ffffff;
+	border:0px solid #8080ff;
+	width:100%;
+	height:20%;
+	position:relative;	
+}
+.inputstyle_account{
+	font-family:"微软雅黑";
+	top: 0px;
+	padding: 10px 40px 10px 10px;
+	left: 0px;
+	border-radius: 3px;
+	width: 232px;
+}
+.login_submit {
+	border:1px solid #ffffff;
+	background:#0080ff;
+	color:#ffffff;
+    font-family:"微软雅黑";
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    width: 50%;
+}
+.login_submit:hover {
+	border:1px solid #0080ff;
+	background:#ffffff;
+	color:#0080ff;
+    font-family:"微软雅黑";
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    width: 50%;
+}

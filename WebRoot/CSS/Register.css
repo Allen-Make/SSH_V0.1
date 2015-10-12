@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+
+#n_full{
+	background-color:#ffffff;
+	width:100%;
+	height:80%;
+/*	float:left;*/	
+}
+
+.n_top{/*顶部块*/
+	background-color:#0080ff;
+	width:100%;
+	height:10%;
+}
+.n_top li{
+	width:65%;
+	height:100%;
+	position:relative;
+	left:50px;
+	float:left;
+}
+
+.n_top li a{
+	color:white;
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-decoration:none;
+	
+	padding-top:10px;
+	display:block;
+	width:100px;
+	height:80%;
+	text-align:center;
+	background-color:#0080ff;
+	margin-left:2px;
+}
+.n_top li a:hover{
+	margin:0px 0px 0px 0px;
+	background-color:#ffffff;
+	color:#0000ff;
+}
+.n_buttom{/*底部块*/
+	background-color:#ffffff;
+	border:0px solid #0080ff;
+	width:100%;
+	height:100%;
+	float:left;
+	position:relative;		
+}
+.n_buttom_apart{/*底部块的一部分*/
+	margin:2% 0% 0% 0%;
+	background-color:#ffffff;
+	border:0px solid #ff0000;
+	left:30%;
+	width:30%;
+	height:80%;
+	position:relative;	
+}
+.n_buttom_apart p{
+	font-family:"微软雅黑";
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+.inputstyle_account{
+	font-family:"微软雅黑";
+	top: 0px;
+	padding: 10px 40px 10px 10px;
+	left: 0px;
+	border-radius: 3px;
+	width: 232px;
+}
+.login_submit {
+	border:1px solid #ffffff;
+	background:#0080ff;
+	color:#ffffff;
+    font-family:"微软雅黑";
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    width: 20%;
+}
+.login_submit:hover {
+	border:1px solid #0080ff;
+	background:#ffffff;
+	color:#0080ff;
+    font-family:"微软雅黑";
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    width: 20%;
+}
