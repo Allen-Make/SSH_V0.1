@@ -10,19 +10,18 @@ String password = request.getParameter("password");
 
 
 
+
+
+
 User u = new User();
-u.setId(Integer.parseInt(id));
+u.setId(Integer.valueOf(id));
 u.setUsername(username);
 u.setPassword(password);
 
-
-Class.forName("com.mysql.jdbc.Driver");
-Connection conn =DriverManager.getConnection("jdbc:mysql://localhost:3306/ssh_v0.1","root","allen95533");
-
 UserManager um = new UserManager();
-boolean exist = um.exisit(u); 
-if(exist)
-{
+
+boolean exist = um.exisit(u);
+if(exist) {
 	response.sendRedirect("Register_Fail.jsp");
 	return;
 }

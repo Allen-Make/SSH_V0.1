@@ -1,49 +1,42 @@
 package com.allen.registration.service;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import com.allen.registration.model.User;
+import com.myhibernate.HibernateSessionFactory;
 
 
 public class UserManager {
 	public boolean exisit(User u) throws Exception
 	{
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn =DriverManager.getConnection("jdbc:mysql://localhost:3306/ssh_v0.1","root","allen95533");
-		String sqlQuery = "select count(*) from user where id=?";
-		PreparedStatement psQuery= (PreparedStatement) conn.prepareStatement(sqlQuery);
-		psQuery.setString(1, String.valueOf(u.getId()));
-		ResultSet rs = psQuery.executeQuery();
-		rs.next();
-		int count = rs.getInt(1);
-		
-		psQuery.close();
-		conn.close();
-		
-		if(count > 0)
-		{
+		SessionFactory sf = HibernateSessionFactory.getSessionFactory();
+    	Session s =sf.openSession();	
+        s.beginTransaction();
+
+		long count = (long) s.createQuery("select count(*) from User u where u.id = :id")
+				.setString("id", String.valueOf(u.getId()))
+				.uniqueResult();
+		s.getTransaction().commit();
+
+		if(count > 0) {
 			return true;
 		}
-		return false;
+		return false;	
 	}
 	
 	public void add(User u) throws Exception
 	{
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn =DriverManager.getConnection("jdbc:mysql://localhost:3306/ssh_v0.1","root","allen95533");
-		
-		String sql = "insert into user values (?,?, ?)";
-		PreparedStatement ps = conn.prepareStatement(sql);
-		ps.setString(1,String.valueOf(u.getId()));
-		ps.setString(2, u.getUsername());
-		ps.setString(3, u.getPassword());
-		ps.executeUpdate();
-		ps.close();
-		conn.close();
+		SessionFactory sf = HibernateSessionFactory.getSessionFactory();
+    	Session s =sf.openSession();
+		s.beginTransaction();		
+        s.save(u);
+        s.getTransaction().commit();
+        s.close();
+        sf.close();
 		
 	}
 	
